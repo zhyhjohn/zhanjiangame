@@ -31,12 +31,12 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .footer {
   width: 100%;
   height: 150px;
   background-color: #000000;
-  margin-top: 600px;
+  margin-top: 610px;
   .logo {
     width: 250px;
     height: 70px;
@@ -45,11 +45,13 @@ export default {
     float: left;
   }
   .text {
+    margin: {
+      top: 20px;
+      right: 100px;
+    }
     width: 700px;
     height: 70px;
     font-size: 3px;
-    margin-top: 20px;
-    margin-right: 100px;
     color: white;
     float: right;
   }

@@ -25,8 +25,12 @@
       <div class="nav">
         <ul>
           <li
-            style="cursor: pointer"
+            style="
+              cursor: pointer;
+              font-family: PingFangSC-Regular, PingFang SC;
+            "
             @click="login()"
+            :class="{ active: index === 0 }"
             @mouseenter="changeActive($event)"
             @mouseleave="removeActive($event)"
             v-for="(item, index) in navs"
@@ -39,7 +43,12 @@
 
       <div class="login" @click="login()">
         <img
-          style="vertical-align: middle; width: 18px; height: 18px"
+          style="
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            padding-right: 15px;
+          "
           src="../assets/soldier.png"
           alt=""
         />注册/登录
@@ -48,11 +57,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, reactive } from "vue";
-export default {
-  name: "MyHeader",
-  setup() {
+
     let iconname = ref("战舰世界");
     let icontxt = ref("云游戏");
     let navs = reactive(["首页", "意见反馈", "FAQ", "前往官网"]);
@@ -67,70 +74,71 @@ export default {
     function removeActive(e) {
       e.currentTarget.className = "";
     }
-
-    return {
-      iconname,
-      icontxt,
-      navs,
-      login,
-      changeActive,
-      removeActive,
-    };
-  },
-};
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .active {
-  color: #8eff8e;
+  color: #25ffa9;
 }
 .container {
-  margin-top: 50px;
-
+  padding-top: 30px;
   .top {
     width: 1500px;
     height: 120px;
     text-align: center;
     .icon {
-      margin-top: 15px;
-      margin-left: 150px;
+      margin: {
+        top: 15px;
+        left: 150px;
+      }
       width: 300px;
       height: 100px;
       float: left;
-      font-size: 30px;
+      font-size: 25px;
       .icontxt {
-        float: right;
         margin-right: 0px;
+        float: right;
         background-image: linear-gradient(to right, #8effc6, #8eff8e, #ffff8e);
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 30px;
+        font: {
+          size: 25px;
+          font-weight: bold;
+        }
       }
     }
     .nav {
-      margin-left: 250px;
+      margin: {
+        top: 10px;
+        left: 230px;
+      }
       width: 200px;
       height: 100px;
       float: left;
     }
     .login {
-      color: white;
-      margin-top: 15px;
-      margin-left: 250px;
-      float: left;
+      margin: {
+        top: 18px;
+        left: 300px;
+      }
       width: 100px;
+      height: 50px;
+      color: white;
+      font-size: 12px;
+      float: left;
       cursor: pointer;
     }
   }
 }
 video {
   position: fixed;
+  width: auto;
+  height: auto;
   top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
+
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   transition: 1s opacity;
@@ -144,9 +152,12 @@ ul {
 }
 li {
   color: white;
-  width: 50%;
+  width: 60%;
   float: right;
-  font-size: 18px;
   list-style: none;
+  font: {
+    size: 14px;
+    weight: bold;
+  }
 }
 </style>
