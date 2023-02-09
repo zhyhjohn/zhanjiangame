@@ -127,6 +127,7 @@ function login() {
 
 .agewarn {
   float: left;
+  cursor: pointer;
   margin: {
     left: 150px;
     top: 450px;

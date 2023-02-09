@@ -7,7 +7,7 @@
       <div class="icon">
         <a style="cursor: pointer" href="http://wowsgame.cn"
           ><img
-            style="vertical-align: middle; width: 30px; height: 30px"
+            style="vertical-align: middle; width: 30px; height: 30px;"
             src="../assets/anchor.png"
             alt=""
           />{{ iconname }}</a
@@ -15,7 +15,7 @@
         <span style="color: gray"> | </span>
         <div class="icontxt">
           <img
-            style="vertical-align: middle; width: 40px; height: 40px"
+            style="vertical-align: middle; width: 35px; height: 35px;"
             src="../assets/gameicon.png"
             alt=""
           />{{ icontxt }}
@@ -96,7 +96,6 @@ import { ref, reactive } from "vue";
       float: left;
       font-size: 25px;
       .icontxt {
-        margin-right: 0px;
         float: right;
         background-image: linear-gradient(to right, #8effc6, #8eff8e, #ffff8e);
         -webkit-background-clip: text;
