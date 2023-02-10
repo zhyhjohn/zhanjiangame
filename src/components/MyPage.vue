@@ -7,71 +7,45 @@
     />
   </div>
   <div class="container">
-    <div class="info">
-      <img
-        style="width: 380px; height: 40px"
-        src="../assets/infotop.png"
-        alt=""
-      />
-    </div>
+    <img class="info" src="../assets/infotop.png" alt="" />
     <div class="step">
       <div class="step1">
-        <img
-          style="width: 15px; height: 30px; margin-top: 10px"
-          src="../assets/numberone.png"
-          alt=""
-        />
-        <div class="desc" @click="login()">快速注册<br />360账号</div>
+        <img class="steppic" src="../assets/numberone.png" alt="" />
+        <div class="desc" @click="login()">
+          <span class="stepdesc">快速注册</span
+          ><span class="stepdesc">360账号</span>
+        </div>
       </div>
       <div class="step2">
-        <img
-          style="width: 15px; height: 30px; margin-top: 10px"
-          src="../assets/numbertwo.png"
-          alt=""
-        />
-        <div class="desc" @click="login()">免下载<br />登录即玩</div>
+        <img class="steppic" src="../assets/numbertwo.png" alt="" />
+        <div class="desc" @click="login()">
+          <span class="stepdesc">免下载</span>
+          <span class="stepdesc">登录即玩</span>
+        </div>
       </div>
       <div class="step3">
-        <img
-          style="width: 15px; height: 30px; margin-top: 10px"
-          src="../assets/numberthree.png"
-          alt=""
-        />
-        <div class="desc" @click="login()">免费畅玩<br />开启云海战时代</div>
+        <img class="steppic" src="../assets/numberthree.png" alt="" />
+        <div class="desc" @click="login()">
+          <span class="stepdesc">免费畅玩</span>
+          <span class="stepdesc">开启云海战时代</span>
+        </div>
       </div>
     </div>
-    <div class="gamebtn" @click="login()">
-      <img
-        style="width: 350px; height: 80px"
-        src="../assets/startbtn.png"
-        alt=""
-      />
-      <div class="tip">
-        <img
-          style="width: 85px; height: 20px"
-          src="../assets/gamebtntip.png"
-          alt=""
-        />
-        <span
-          style="
-            position: absolute;
-            top: 2px;
-            bottom: 0;
-            left: 8px;
-            color: #000;
-            font-size: 12px;
-          "
-          >官方云游戏</span
-        >
+    <div class="startbtn">
+      <div class="gamebtn" @click="login()">
+        <div class="tip">官方云游戏</div>
       </div>
     </div>
     <div class="read">
-      <input type="radio" />我已阅读，并确认理解和接受
-      <a
-        style="color: #d6fffb"
-        href="https://wg.360.cn/user/agreement/list.html"
-        >《360游戏服务及许可协议》,《360用户隐私政策》,《360儿童隐私保护政策》</a
-      >
+      <input type="radio" />
+      <p>
+        我已阅读，并确认理解和接受
+        <a
+          style="color: #d6fffb"
+          href="https://wg.360.cn/user/agreement/list.html"
+          >《360游戏服务及许可协议》,《360用户隐私政策》,《360儿童隐私保护政策》</a
+        >
+      </p>
     </div>
     <div class="download">
       <img src="https://s0.ssl.qhres2.com/static/0336c86998e26823.svg" alt="" />
@@ -82,9 +56,11 @@
       >
     </div>
     <div class="joingroup">
-      战舰世界云游戏官方QQ群：<a href="https://jq.qq.com/?_wv=1027&k=PqUG6vtg"
-        >{{ qqnumber }} 点击加入</a
-      >
+      <p>
+        战舰世界云游戏官方QQ群：<a href="https://jq.qq.com/?_wv=1027&k=PqUG6vtg"
+          >{{ qqnumber }} 点击加入</a
+        >
+      </p>
     </div>
     <div class="whoprovide">
       <img
@@ -99,7 +75,6 @@
 
 <script setup>
 import { ref } from "vue";
-
 let qqnumber = ref(677940959);
 
 function login() {
@@ -108,47 +83,51 @@ function login() {
 </script>
 <style lang="scss" scoped>
 @mixin step {
+  display: flex;
+  align-items: center;
   width: 130px;
-  height: 55px;
+  height: 50px;
   padding-left: 20px;
-  float: left;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  .steppic {
+    width: 18px;
+    height: 30px;
+  }
   .desc {
-    width: 100px;
-    height: 40px;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
     font-size: 12px;
-    text-align: left;
     color: white;
-    float: right;
+    .stepdesc {
+      display: block;
+      width: 100px;
+    }
   }
 }
 
 .agewarn {
-  float: left;
+  position: absolute;
   cursor: pointer;
-  margin: {
-    left: 150px;
-    top: 450px;
-  }
+  top: 600px;
 }
 .container {
-  margin-top: 20px;
-  width: 600px;
   float: right;
+  width: 450px;
+  color: #fff;
   .info {
+    width: 380px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 60px;
     margin-right: 300px;
-    float: right;
+    margin-bottom: 28px;
   }
   .step {
-    margin: {
-      top: 20px;
-      right: 180px;
-    }
-    width: 500px;
-    height: 60px;
-    float: right;
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 60px;
     cursor: pointer;
 
     .step1 {
@@ -161,81 +140,71 @@ function login() {
       @include step;
     }
   }
-  .gamebtn {
-    margin: {
-      right: 400px;
-      top: 60px;
-    }
-    width: 250px;
-    height: 60px;
+  .startbtn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    float: right;
+    margin-left: 60px;
+    margin-bottom: 12px;
     cursor: pointer;
-    .tip {
-      margin: {
-        right: 219px;
-        bottom: 55px;
+    .gamebtn {
+      width: 330px;
+      height: 90px;
+      background: url(../assets/startbtn.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      .tip {
+        width: 80px;
+        height: 25px;
+        margin: 1px 0 0 1px;
+        padding-left: 10px;
+        background: url(../assets/gamebtntip.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font-size: 14px;
+        color: #000;
+        line-height: 25px;
       }
-      position: absolute;
-      color: white;
     }
   }
   .read {
-    margin: {
-      top: 15px;
-      right: 230px;
-    }
-    width: 450px;
-    height: 60px;
-    float: right;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
     font-size: 12px;
-    color: white;
+    opacity: 0.7;
   }
   .download {
-    margin: {
-      top: 10px;
-      right: 380px;
-    }
-    width: 300px;
-    height: 30px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    width: 350px;
+    height: 38px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    margin-left: 60px;
+    background: rgba(255, 186, 125, 0.4);
     border-radius: 5px;
-    color: #fff3b8;
-    background-color: #ffba7d66;
+    border: 1px solid rgba(255, 210, 157, 0.32);
     font-size: 12px;
-
-    float: right;
+    color: #fff3b8;
   }
   .joingroup {
-    margin: {
-      top: 10px;
-      right: 280px;
-    }
-    width: 400px;
-    height: 25px;
-    font-size: 10px;
-    color: white;
-    float: right;
+    width: 560px;
+    margin-left: 60px;
+    margin-bottom: 12px;
+    line-height: 20px;
+    font-size: 12px;
   }
   .whoprovide {
-    width: 400px;
-    height: 30px;
-    margin-right: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 10px;
-    color: white;
-    float: right;
+    margin-top: 20px;
+    margin-left: 60px;
+    font-size: 12px;
   }
 }
 a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 </style>

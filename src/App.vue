@@ -1,9 +1,15 @@
 <template>
-  <div class="main">
-    <MyHeader />
-  <MyPage />
-  <MyFooter />
-  </div>
+    <div class="cover">
+      <div class="main">
+        <div class="content">
+          <MyHeader />
+          <MyPage />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <MyFooter />
+    </div>
 </template>
 
 <script>
@@ -22,11 +28,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main{
-    background: url(https://p1.ssl.qhimg.com/t012aaa7efa80a1f624.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+
+.cover {
+  background: url(https://p1.ssl.qhimg.com/t012aaa7efa80a1f624.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .main {
+    margin: 0 300px 0 150px;
+    .content {
+      height: 800px;
+    }
+  }
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

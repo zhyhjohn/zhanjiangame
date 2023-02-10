@@ -33,27 +33,23 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+  display: inline-flex;
+  justify-content: center;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   height: 150px;
   background-color: #000000;
-  margin-top: 610px;
   .logo {
     width: 250px;
-    height: 70px;
     padding-top: 40px;
-    margin-left: 400px;
-    float: left;
   }
   .text {
-    margin: {
-      top: 20px;
-      right: 100px;
-    }
-    width: 700px;
+    padding-top: 10px;
+    width: 500px;
     height: 70px;
     font-size: 3px;
-    color: white;
-    float: right;
+    color: #9a9999;
   }
 }
 </style>
