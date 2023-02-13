@@ -1,53 +1,42 @@
 <template>
   <div class="container">
-    <div class="video">
-      <video autoplay loop muted src="../assets/wowsbg.mp4"></video>
-    </div>
     <div class="top">
+      <img class="agewarn" src="../assets/agewarning.png" alt="" />
       <div class="icon">
         <a style="cursor: pointer" href="http://wowsgame.cn"
-          ><img
-            style="vertical-align: middle; width: 30px; height: 30px"
-            src="../assets/anchor.png"
-            alt=""
-          />{{ iconname }}</a
+          ><img class="iconleft" src="../assets/anchor.png" alt="" />{{
+            iconname
+          }}</a
         >
-        <span style="color: gray"> | </span>
+        <span style="color: gray;padding: 0 20px"> | </span>
         <div class="icontxt">
-          <img
-            style="vertical-align: middle; width: 35px; height: 35px"
-            src="../assets/gameicon.png"
-            alt=""
-          />{{ icontxt }}
+          <img class="iconright" src="../assets/gameicon.png" alt="" />{{
+            icontxt
+          }}
         </div>
       </div>
 
       <div class="navs">
-        <div class="nav">
-          <ul>
-            <li
-              style="
-                cursor: pointer;
-                font-family: PingFangSC-Regular, PingFang SC;
-              "
-              @click="login()"
-              :class="{ active: index === 0 }"
-              @mouseenter="changeActive($event)"
-              @mouseleave="removeActive($event)"
-              v-for="(item, index) in navs"
-              :key="index"
-            >
-              {{ item }}
-            </li>
-          </ul>
-        </div>
+        <ul class="nav">
+          <li
+            @click="login()"
+            :class="{ active: index === 0 }"
+            @mouseenter="changeActive($event)"
+            @mouseleave="removeActive($event)"
+            v-for="(item, index) in navs"
+            :key="index"
+          >
+            {{ item }}
+          </li>
+        </ul>
 
         <div class="login" @click="login()">
           <img
             style="display: flex; width: 20px; height: 20px; margin-left: 20px"
             src="../assets/soldier.png"
             alt=""
-          />注册/登录
+          />
+          <div class="loginbtn">注册/登录</div>
         </div>
       </div>
     </div>
@@ -78,21 +67,26 @@ function removeActive(e) {
   color: #25ffa9;
 }
 .container {
-  padding-top: 50px;
   .top {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    padding-top: 50px;
     .agewarn {
       position: absolute;
-      float: left;
+      width: 35px;
+      height: 45px;
+      top: 500px;
       cursor: pointer;
-      top: 600px;
     }
     .icon {
       align-items: center;
       display: flex;
       font-size: 25px;
+      .iconleft {
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+      }
       .icontxt {
         display: flex;
         background-image: linear-gradient(to right, #8effc6, #8eff8e, #ffff8e);
@@ -101,6 +95,11 @@ function removeActive(e) {
         font: {
           size: 25px;
           font-weight: bold;
+        }
+        .iconright {
+          vertical-align: middle;
+          width: 35px;
+          height: 35px;
         }
       }
     }
@@ -111,46 +110,33 @@ function removeActive(e) {
       width: 550px;
       .nav {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 0;
       }
       .login {
         display: flex;
         align-items: center;
         color: #fff;
-        cursor: pointer;
+        margin-left: 0;
+        .loginbtn {
+          margin-left: 15px;
+          color: #fff;
+          opacity: 0.6;
+          font-size: 12px;
+          cursor: pointer;
+        }
       }
     }
   }
-}
-video {
-  position: fixed;
-  width: auto;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  transition: 1s opacity;
 }
 a {
   color: white;
   text-decoration: none;
 }
-ul {
-  display: -webkit-box;
-}
 li {
   color: white;
-  width: 60%;
-  float: right;
   list-style: none;
-  font: {
-    size: 14px;
-    weight: bold;
-  }
+  margin-left: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
 </style>

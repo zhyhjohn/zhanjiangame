@@ -1,11 +1,4 @@
 <template>
-  <div class="agewarn">
-    <img
-      style="width: 40px; height: 50px"
-      src="../assets/agewarning.png"
-      alt=""
-    />
-  </div>
   <div class="container">
     <img class="info" src="../assets/infotop.png" alt="" />
     <div class="step">
@@ -50,7 +43,7 @@
     <div class="download">
       <img src="https://s0.ssl.qhres2.com/static/0336c86998e26823.svg" alt="" />
       <a
-        style="color: #fff3b8; padding: 5px"
+        style="color: #fff3b8; padding: 5px; display: block"
         href="https://redir.wggames.cn/z799nl95/"
         >下载《战舰世界》客户端 无限畅玩</a
       >
@@ -85,7 +78,7 @@ function login() {
 @mixin step {
   display: flex;
   align-items: center;
-  width: 130px;
+  width: 120px;
   height: 50px;
   padding-left: 20px;
   background-repeat: no-repeat;
@@ -107,48 +100,47 @@ function login() {
   }
 }
 
-.agewarn {
-  position: absolute;
-  cursor: pointer;
-  top: 600px;
-}
 .container {
-  float: right;
-  width: 450px;
+  position: absolute;
+  width: 440px;
+  top: 150px;
+  right: 0;
   color: #fff;
   .info {
-    width: 380px;
+    width: 330px;
     height: 40px;
-    margin-top: 50px;
     margin-left: 60px;
-    margin-right: 300px;
     margin-bottom: 28px;
   }
   .step {
     display: flex;
-    margin-bottom: 40px;
     margin-left: 60px;
+    margin-bottom: 40px;
     cursor: pointer;
 
     .step1 {
       background: url(../assets/steppic1.png);
       @include step;
     }
-    .step2,
+    .step2 {
+      background: url(../assets/steppic2.png);
+      @include step;
+          transform: translate(-20px);
+    }
     .step3 {
       background: url(../assets/steppic2.png);
       @include step;
+      transform: translate(-40px);
     }
   }
   .startbtn {
     display: flex;
     align-items: center;
     margin-left: 60px;
-    margin-bottom: 12px;
     cursor: pointer;
     .gamebtn {
-      width: 330px;
-      height: 90px;
+      width: 300px;
+      height: 80px;
       background: url(../assets/startbtn.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -177,8 +169,8 @@ function login() {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 38px;
+    width: 300px;
+    height: 30px;
     margin-top: 30px;
     margin-bottom: 12px;
     margin-left: 60px;

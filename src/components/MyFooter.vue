@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="container">
     <div class="logo">
       <img src="../assets/footerlogo.png" alt="" />
     </div>
@@ -32,24 +32,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer {
+.container {
   display: inline-flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  position: relative;
   margin-right: auto;
   margin-left: auto;
-  height: 150px;
-  background-color: #000000;
+  width: 100%;
+  text-align: right;
   .logo {
-    width: 250px;
-    padding-top: 40px;
+    margin-right: 20px;
   }
   .text {
-    padding-top: 10px;
-    width: 500px;
-    height: 70px;
-    font-size: 3px;
+    font-size: 12px;
+    text-align: left;
     color: #9a9999;
   }
+}
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 </style>
