@@ -145,16 +145,16 @@ function login() {
       background-repeat: no-repeat;
       background-size: 100% 100%;
       .tip {
-        width: 80px;
+        width: 75px;
         height: 25px;
         margin: 1px 0 0 1px;
         padding-left: 10px;
         background: url(../assets/gamebtntip.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        font-size: 14px;
+        font-size: 13px;
         color: #000;
-        line-height: 25px;
+        line-height: 20px;
       }
     }
   }
