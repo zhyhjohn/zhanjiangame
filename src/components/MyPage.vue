@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="infocontainer">
     <img class="info" src="../assets/infotop.png" alt="" />
     <div class="step">
       <div class="step1">
@@ -78,8 +78,8 @@ function login() {
 @mixin step {
   display: flex;
   align-items: center;
-  width: 180px;
-  height: 80px;
+  width: 150px;
+  height: 60px;
   padding-left: 20px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -100,20 +100,21 @@ function login() {
   }
 }
 
-.container {
-  width: 580px;
-  top: 250px;
+.infocontainer {
+  position:absolute;
+  width: 550px;
+  top: 200px;
   right: 0;
   color: #fff;
   .info {
-    width: 550px;
-    height: 70px;
-    margin-left: 60px;
+    width: 450px;
+    height: 50px;
+    margin-left: 30px;
     margin-bottom: 28px;
   }
   .step {
     display: flex;
-    margin-left: 60px;
+    margin-left: 30px;
     margin-bottom: 80px;
     cursor: pointer;
 
@@ -135,32 +136,32 @@ function login() {
   .startbtn {
     display: flex;
     align-items: center;
-    margin-left: 60px;
+    margin-left: 30px;
     cursor: pointer;
     .gamebtn {
-      width: 450px;
-      height: 140px;
+      width: 400px;
+      height: 110px;
       background: url(../assets/startbtn.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       .tip {
-        width: 120px;
-        height: 40px;
+        width: 100px;
+        height: 30px;
         margin: 1px 0 0 1px;
         padding-left: 10px;
         background: url(../assets/gamebtntip.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        font-size: 20px;
+        font-size: 18px;
         color: #000;
-        line-height: 38px;
+        line-height: 28px;
       }
     }
   }
   .read {
     display: flex;
     align-items: center;
-    margin-left: 60px;
+    margin-left: 30px;
     font-size: 16px;
     opacity: 0.7;
   }
@@ -168,11 +169,11 @@ function login() {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 450px;
-    height: 45px;
+    width: 400px;
+    height: 40px;
     margin-top: 30px;
     margin-bottom: 15px;
-    margin-left: 60px;
+    margin-left: 30px;
     background: rgba(255, 186, 125, 0.4);
     border-radius: 5px;
     border: 1px solid rgba(255, 210, 157, 0.32);
@@ -180,8 +181,8 @@ function login() {
     color: #fff3b8;
   }
   .joingroup {
-    width: 560px;
-    margin-left: 60px;
+    width: 400px;
+    margin-left: 30px;
     margin-bottom: 15px;
     line-height: 20px;
     font-size: 16px;
@@ -190,7 +191,7 @@ function login() {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 30px;
     font-size: 16px;
   }
 }

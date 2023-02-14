@@ -29,7 +29,7 @@ import MyPage from "./components/MyPage";
 import MyFooter from "./components/MyFooter";
 import MyCover from "./components/MyCover";
 export default {
-  name: "APP",
+  name: "App",
   components: { MyHeader, MyPage, MyFooter, MyCover },
   data() {
     return { scale: 0, width: 1920, height: 1080 };
@@ -106,7 +106,7 @@ export default {
   height: 100%;
   .content {
     position: relative;
-    margin: 0 300px 0 150px;
+    margin: 0 280px 0 150px;
     height: 1080px;
     z-index: 99;
     overflow: hidden;
