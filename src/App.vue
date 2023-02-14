@@ -16,9 +16,7 @@
         <MyHeader />
         <MyPage />
       </div>
-      <footer class="footer">
         <MyFooter />
-      </footer>
     </div>
   </div>
 </template>

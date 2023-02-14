@@ -1,5 +1,5 @@
 <template>
-  <Footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="logo">
         <span class="footerlogo">
@@ -23,7 +23,7 @@
         </p>
       </div>
     </div>
-  </Footer>
+  </footer>
 </template>
 
 <script>

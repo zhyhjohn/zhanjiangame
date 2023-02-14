@@ -30,12 +30,10 @@
       </div>
     </div>
     <div class="read">
-      <input type="checkbox"/>
+      <input type="checkbox" />
       <p>
         我已阅读，并确认理解和接受
-        <a
-          style="color: #d6fffb"
-          href="https://wg.360.cn/user/agreement/list.html"
+        <a class="readtxt" href="https://wg.360.cn/user/agreement/list.html"
           >《360游戏服务及许可协议》,《360用户隐私政策》,《360儿童隐私保护政策》</a
         >。
       </p>
@@ -50,18 +48,22 @@
     </div>
     <div class="joingroup">
       <p>
-        战舰世界云游戏官方QQ群：<a href="https://jq.qq.com/?_wv=1027&k=PqUG6vtg"
+        战舰世界云游戏官方QQ群：<a
+          class="number"
+          href="https://jq.qq.com/?_wv=1027&k=PqUG6vtg"
           >{{ qqnumber }} 点击加入</a
         >
       </p>
     </div>
     <div class="whoprovide">
       <img
-        style="width: 65px; height: 20px"
+        style="width: 65px; height: 20px; margin: 5px; opacity: 0.7"
         src="../assets/yuanjing.png"
         alt=""
       />
-      提供云游戏技术服务
+      <span style="font-size: 14px; color: #fff; opacity: 0.4"
+        >提供云游戏技术服务</span
+      >
     </div>
   </div>
 </template>
@@ -69,18 +71,18 @@
 <script setup>
 import { ref } from "vue";
 let qqnumber = ref(677940959);
-const checked1 = ref(true);
 
 function login() {
   alert("请先注册登录");
 }
 </script>
+
 <style lang="scss" scoped>
 @mixin step {
   display: flex;
   align-items: center;
-  width: 150px;
-  height: 60px;
+  width: 180px;
+  height: 70px;
   padding-left: 20px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -103,8 +105,8 @@ function login() {
 
 .infocontainer {
   position: absolute;
-  width: 550px;
-  top: 200px;
+  width: 600px;
+  top: 220px;
   right: 0;
   color: #fff;
   .info {
@@ -116,7 +118,7 @@ function login() {
   .step {
     display: flex;
     margin-left: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 65px;
     cursor: pointer;
 
     .step1 {
@@ -165,6 +167,12 @@ function login() {
     margin-left: 30px;
     font-size: 16px;
     opacity: 0.7;
+    .readtxt {
+      color: #d6fffb;
+      &:hover {
+        color: #8ffaef;
+      }
+    }
   }
   .download {
     display: inline-flex;
@@ -173,13 +181,18 @@ function login() {
     width: 400px;
     height: 40px;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     margin-left: 30px;
     background: rgba(255, 186, 125, 0.4);
     border-radius: 5px;
     border: 1px solid rgba(255, 210, 157, 0.32);
     font-size: 16px;
     color: #fff3b8;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background: rgba(245, 150, 65, 0.4);
+    }
   }
   .joingroup {
     width: 400px;
@@ -187,6 +200,13 @@ function login() {
     margin-bottom: 15px;
     line-height: 20px;
     font-size: 16px;
+    .number {
+      color: #fff;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
   .whoprovide {
     display: flex;
