@@ -63,12 +63,12 @@ function removeActive(e) {
 .top {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 60px;
   .agewarn {
     position: absolute;
-    width: 35px;
-    height: 45px;
-    top: 500px;
+    width: 50px;
+    height: 60px;
+    top: 750px;
     cursor: pointer;
   }
   .icon {
@@ -76,11 +76,11 @@ function removeActive(e) {
     justify-content: center;
     align-items: center;
     fill: currentColor;
-    font-size: 25px;
+    font-size: 35px;
     .iconleft {
       vertical-align: middle;
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
     }
     .icontxt {
       display: flex;
@@ -88,11 +88,11 @@ function removeActive(e) {
       background-image: linear-gradient(to right, #8effc6, #8eff8e, #ffff8e);
       -webkit-background-clip: text;
       color: transparent;
-      font-size: 25px;
+      font-size: 35px;
       .iconright {
         vertical-align: middle;
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
       }
     }
   }
@@ -100,7 +100,7 @@ function removeActive(e) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 550px;
+    width: 650px;
     .nav {
       display: flex;
     }
@@ -111,15 +111,15 @@ function removeActive(e) {
       margin-left: 0;
       .loginpic {
         display: flex;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         margin-left: 20px;
       }
       .loginbtn {
         margin-left: 15px;
         color: #fff;
         opacity: 0.6;
-        font-size: 12px;
+        font-size: 14px;
         cursor: pointer;
       }
     }
@@ -133,8 +133,8 @@ li {
   position: relative;
   color: white;
   list-style: none;
-  margin-left: 50px;
-  font-size: 14px;
+  margin-right: 50px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }

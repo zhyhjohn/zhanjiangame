@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <Footer class="footer">
     <div class="container">
       <div class="logo">
         <span class="footerlogo">
@@ -23,7 +23,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </Footer>
 </template>
 
 <script>
@@ -40,7 +40,6 @@ export default {
   width: 100%;
   padding: 20px 0;
   background-color: #000000;
-
   .container {
     position: relative;
     display: inline-flex;

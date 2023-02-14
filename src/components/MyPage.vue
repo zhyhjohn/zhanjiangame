@@ -57,7 +57,7 @@
     </div>
     <div class="whoprovide">
       <img
-        style="width: 50px; height: 15px"
+        style="width: 75px; height: 25px"
         src="../assets/yuanjing.png"
         alt=""
       />
@@ -78,20 +78,20 @@ function login() {
 @mixin step {
   display: flex;
   align-items: center;
-  width: 120px;
-  height: 50px;
+  width: 180px;
+  height: 80px;
   padding-left: 20px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .steppic {
-    width: 18px;
-    height: 30px;
+    width: 25px;
+    height: 40px;
   }
   .desc {
     display: flex;
     flex-direction: column;
-    margin-left: 12px;
-    font-size: 12px;
+    margin-left: 10px;
+    font-size: 14px;
     color: white;
     .stepdesc {
       display: block;
@@ -101,21 +101,20 @@ function login() {
 }
 
 .container {
-  position: absolute;
-  width: 440px;
-  top: 150px;
+  width: 580px;
+  top: 250px;
   right: 0;
   color: #fff;
   .info {
-    width: 330px;
-    height: 40px;
+    width: 550px;
+    height: 70px;
     margin-left: 60px;
     margin-bottom: 28px;
   }
   .step {
     display: flex;
     margin-left: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     cursor: pointer;
 
     .step1 {
@@ -139,22 +138,22 @@ function login() {
     margin-left: 60px;
     cursor: pointer;
     .gamebtn {
-      width: 300px;
-      height: 80px;
+      width: 450px;
+      height: 140px;
       background: url(../assets/startbtn.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       .tip {
-        width: 75px;
-        height: 25px;
+        width: 120px;
+        height: 40px;
         margin: 1px 0 0 1px;
         padding-left: 10px;
         background: url(../assets/gamebtntip.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        font-size: 13px;
+        font-size: 20px;
         color: #000;
-        line-height: 20px;
+        line-height: 38px;
       }
     }
   }
@@ -162,37 +161,37 @@ function login() {
     display: flex;
     align-items: center;
     margin-left: 60px;
-    font-size: 12px;
+    font-size: 16px;
     opacity: 0.7;
   }
   .download {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 30px;
+    width: 450px;
+    height: 45px;
     margin-top: 30px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     margin-left: 60px;
     background: rgba(255, 186, 125, 0.4);
     border-radius: 5px;
     border: 1px solid rgba(255, 210, 157, 0.32);
-    font-size: 12px;
+    font-size: 16px;
     color: #fff3b8;
   }
   .joingroup {
     width: 560px;
     margin-left: 60px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     line-height: 20px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .whoprovide {
     display: flex;
     align-items: center;
     margin-top: 20px;
     margin-left: 60px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 a {
