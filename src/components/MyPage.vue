@@ -30,14 +30,14 @@
       </div>
     </div>
     <div class="read">
-      <input type="radio" />
+      <input type="checkbox"/>
       <p>
         我已阅读，并确认理解和接受
         <a
           style="color: #d6fffb"
           href="https://wg.360.cn/user/agreement/list.html"
           >《360游戏服务及许可协议》,《360用户隐私政策》,《360儿童隐私保护政策》</a
-        >
+        >。
       </p>
     </div>
     <div class="download">
@@ -57,7 +57,7 @@
     </div>
     <div class="whoprovide">
       <img
-        style="width: 75px; height: 25px"
+        style="width: 65px; height: 20px"
         src="../assets/yuanjing.png"
         alt=""
       />
@@ -69,6 +69,7 @@
 <script setup>
 import { ref } from "vue";
 let qqnumber = ref(677940959);
+const checked1 = ref(true);
 
 function login() {
   alert("请先注册登录");
@@ -101,7 +102,7 @@ function login() {
 }
 
 .infocontainer {
-  position:absolute;
+  position: absolute;
   width: 550px;
   top: 200px;
   right: 0;
@@ -125,7 +126,7 @@ function login() {
     .step2 {
       background: url(../assets/steppic2.png);
       @include step;
-          transform: translate(-20px);
+      transform: translate(-20px);
     }
     .step3 {
       background: url(../assets/steppic2.png);
