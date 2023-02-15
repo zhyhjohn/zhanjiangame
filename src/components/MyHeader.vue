@@ -16,17 +16,17 @@
 
     <div class="navs">
       <ul class="nav">
-        <li style="margin-left: 0; color: #25ffa9">首页</li>
-        <li class="navlink" @click="login()">意见反馈</li>
+        <li class="navitemfirst">首页</li>
+        <li class="navitem" @click="logintip()">意见反馈</li>
         <li>
-          <a class="navlink" href="https://camp.wot.360.cn/shipfaq.html">FAQ</a>
+          <a class="navitem" href="https://camp.wot.360.cn/shipfaq.html">FAQ</a>
         </li>
         <li>
-          <a class="navlink" href="https://wowsgame.cn/">前往官网</a>
+          <a class="navitem" href="https://wowsgame.cn/">前往官网</a>
         </li>
       </ul>
 
-      <div class="login" @click="login()">
+      <div class="login" @click="showlogin = true">
         <img class="loginpic" src="../assets/soldier.png" alt="" />
         <div class="loginbtn">注册/登录</div>
       </div>
@@ -35,12 +35,12 @@
       class="agewarn"
       src="../assets/agewarning.png"
       alt=""
-      @click="dialogVisible = true"
+      @click="showwarning = true"
     />
   </div>
   <el-dialog
     class="agetxt"
-    v-model="dialogVisible"
+    v-model="showwarning"
     title="《战舰世界》适龄提示"
     width="50%"
     top="10%"
@@ -72,61 +72,62 @@
 
 <script setup>
 import { ref } from "vue";
+import { ElMessage } from "element-plus";
 
 let iconname = ref("战舰世界");
 let icontxt = ref("云游戏");
-const dialogVisible = ref(false);
+const showwarning = ref(false);
+const logintip = () => {
+  ElMessage.error("请先登陆账号！");
+};
 
-function login() {
-  alert("请先注册登录");
-}
 </script>
 
 <style lang="scss" scoped>
 .agetxt {
   font-size: 20px;
 }
-.active {
-  color: #25ffa9;
-}
 .top {
   display: flex;
-  justify-content: space-between;
   padding-top: 60px;
+  justify-content: space-between;
   .icon {
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    fill: currentColor;
     font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    fill: currentColor;
     .iconleft {
-      vertical-align: middle;
       width: 35px;
       height: 35px;
+      vertical-align: middle;
     }
     .icontxt {
       display: flex;
       align-items: center;
+      font-size: 35px;
       background-image: linear-gradient(to right, #8effc6, #8eff8e, #ffff8e);
       background-clip: text;
-      -webkit-background-clip: text;
       color: transparent;
-      font-size: 35px;
       .iconright {
-        vertical-align: middle;
         width: 45px;
         height: 45px;
+        vertical-align: middle;
       }
     }
   }
   .navs {
     display: flex;
+    width: 700px;
     justify-content: space-between;
     align-items: center;
-    width: 700px;
     .nav {
       display: flex;
-      .navlink {
+      .navitemfirst {
+        margin-left: 0;
+        color: #25ffa9;
+      }
+      .navitem {
         &:hover {
           color: #25ffa9;
         }
@@ -134,9 +135,9 @@ function login() {
     }
     .login {
       display: flex;
+      margin-left: 0;
       align-items: center;
       color: #fff;
-      margin-left: 0;
       .loginpic {
         display: flex;
         width: 30px;
@@ -145,11 +146,11 @@ function login() {
       }
       .loginbtn {
         margin-left: 15px;
-        color: #fff;
         opacity: 0.6;
         font-size: 14px;
-        cursor: pointer;
+        color: #fff;
         transition: opacity 0.5s;
+        cursor: pointer;
         &:hover {
           opacity: 1;
         }

@@ -6,7 +6,7 @@
           <img src="../assets/footerlogo.png" alt="" />
         </span>
       </div>
-      <div class="text">
+      <div class="footertext">
         <p>© 2011 – 2020 Wargaming.net保留所有权利</p>
         <p>
           Copyright 2016 YouXi.com 版权所有 趣游时代(北京)科技有限公司
@@ -26,35 +26,30 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: "MyFooter",
-  data() {
-    return {};
-  },
-};
+<script setup>
 </script>
 
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  padding: 20px 0;
-  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #000;
   .container {
     position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
+    display: inline-flex;
+    align-items: center;
     text-align: right;
+    justify-content: center;
     .logo {
       .footerlogo {
         margin-right: 20px;
       }
     }
-    .text {
+    .footertext {
       display: inline-block;
       font-size: 12px;
       line-height: 20px;

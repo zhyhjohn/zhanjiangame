@@ -4,28 +4,28 @@
     <div class="step">
       <div class="step1">
         <img class="steppic" src="../assets/numberone.png" alt="" />
-        <div class="desc" @click="login()">
+        <div class="desc" @click="logintip()">
           <span class="stepdesc">快速注册</span
           ><span class="stepdesc">360账号</span>
         </div>
       </div>
       <div class="step2">
         <img class="steppic" src="../assets/numbertwo.png" alt="" />
-        <div class="desc" @click="login()">
+        <div class="desc" @click="logintip()">
           <span class="stepdesc">免下载</span>
           <span class="stepdesc">登录即玩</span>
         </div>
       </div>
       <div class="step3">
         <img class="steppic" src="../assets/numberthree.png" alt="" />
-        <div class="desc" @click="login()">
+        <div class="desc" @click="logintip()">
           <span class="stepdesc">免费畅玩</span>
           <span class="stepdesc">开启云海战时代</span>
         </div>
       </div>
     </div>
     <div class="startbtn">
-      <div class="gamebtn" @click="login()">
+      <div class="gamebtn" @click="logintip()">
         <div class="tip">官方云游戏</div>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <input type="checkbox" />
       <p>
         我已阅读，并确认理解和接受
-        <a class="readtxt" href="https://wg.360.cn/user/agreement/list.html"
+        <a class="readtext" href="https://wg.360.cn/user/agreement/list.html"
           >《360游戏服务及许可协议》,《360用户隐私政策》,《360儿童隐私保护政策》</a
         >。
       </p>
@@ -56,25 +56,20 @@
       </p>
     </div>
     <div class="whoprovide">
-      <img
-        style="width: 65px; height: 20px; margin: 5px; opacity: 0.7"
-        src="../assets/yuanjing.png"
-        alt=""
-      />
-      <span style="font-size: 14px; color: #fff; opacity: 0.4"
-        >提供云游戏技术服务</span
-      >
+      <img class="whopic" src="../assets/yuanjing.png" alt="" />
+      <span class="whotext">提供云游戏技术服务</span>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-let qqnumber = ref(677940959);
+import { ElMessage } from "element-plus";
 
-function login() {
-  alert("请先注册登录");
-}
+let qqnumber = ref(677940959);
+const logintip = () => {
+  ElMessage.error("请先登陆账号！");
+};
 </script>
 
 <style lang="scss" scoped>
@@ -138,8 +133,8 @@ function login() {
   }
   .startbtn {
     display: flex;
-    align-items: center;
     margin-left: 30px;
+    align-items: center;
     cursor: pointer;
     .gamebtn {
       width: 400px;
@@ -155,8 +150,8 @@ function login() {
         background: url(../assets/gamebtntip.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        font-size: 18px;
         color: #000;
+        font-size: 18px;
         line-height: 28px;
       }
     }
@@ -167,7 +162,7 @@ function login() {
     margin-left: 30px;
     font-size: 16px;
     opacity: 0.7;
-    .readtxt {
+    .readtext {
       color: #d6fffb;
       &:hover {
         color: #8ffaef;
@@ -210,10 +205,22 @@ function login() {
   }
   .whoprovide {
     display: flex;
-    align-items: center;
     margin-top: 20px;
     margin-left: 30px;
     font-size: 16px;
+    align-items: center;
+    .whopic {
+      width: 65px;
+      height: 20px;
+      margin: 5px;
+      opacity: 0.7;
+    }
+    .whotext {
+      font-size: 14px;
+      color: #fff;
+      opacity: 0.4;
+      cursor: default;
+    }
   }
 }
 a {
